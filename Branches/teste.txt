@@ -1,0 +1,26 @@
+console.log("Testando o Repo");
+
+
+
+# Isto é um comentário
+git add arquivo.txt          # Adiciona um arquivo específico
+git add .                    # Adiciona TODOS os arquivos modificados
+git add *.txt               # Adiciona todos os arquivos .txt
+git add pasta/              # Adiciona todos os arquivos de uma pasta
+
+
+# 1. (Você modifica arquivos)
+# 2. Preparar para commit
+git add .
+
+# 3. Criar commit local
+git commit -m "Sua mensagem aqui"
+
+# 4. Enviar para repositório remoto
+git push
+
+📁 Modificar   →   📦 git add   →   🏷️ git commit   →   🚚 git push
+(Itens soltos)   (Na caixa)      (Caixa lacrada)    (Caixa enviada)
+
+
+Testando branches
