@@ -14,7 +14,8 @@
         
         <div class="exemplo">
             <h3>Exemplo de uso:</h3>
-            <button onclick="executarFuncaoY()">Executar Função Y</button>
+            <p>Clique no botão abaixo para testar a Função Y:</p>
+            <button onclick="executarFuncaoY()">🚀 Executar Função Y</button>
             <div id="resultado"></div>
         </div>
     </div>
@@ -22,8 +23,14 @@
     <script>
         function executarFuncaoY() {
             const resultado = document.getElementById('resultado');
-            resultado.innerHTML = '<p style="color: green;">✅ Função Y executada com sucesso!</p>';
-            console.log('Função Y foi executada na branch feature/funcao-y');
+            resultado.innerHTML = `
+                <div class="sucesso">
+                    <h4>✅ Função Y executada com sucesso!</h4>
+                    <p>Timestamp: ${new Date().toLocaleString()}</p>
+                    <p>Status: <span class="status">Funcionando perfeitamente!</span></p>
+                </div>
+            `;
+            console.log('Função Y executada em:', new Date().toISOString());
         }
     </script>
 
@@ -54,6 +61,26 @@
         
         button:hover {
             background-color: #0056b3;
+            transform: translateY(-1px);
+            transition: all 0.2s ease;
+        }
+        
+        .sucesso {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .sucesso h4 {
+            margin: 0 0 10px 0;
+        }
+        
+        .status {
+            font-weight: bold;
+            color: #28a745;
         }
     </style>
 </body>
